@@ -1,9 +1,12 @@
+// Import packages.
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 
+// Main function.
 void main() => runApp(MyApp());
 
+// MyApp.
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -22,6 +25,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Home page.
 class MyHomePage extends StatefulWidget {
   final String title;
 
@@ -35,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        // App bar.
         appBar: AppBar(
           // The title text which will be shown on the action bar
           title: Center(
@@ -81,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
             }));
   }
 
+// Read items from json.
   List items = [];
   Future<void> readJson() async {
     final String response =
@@ -93,6 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+// Item grid.
 class CatGrid extends StatefulWidget {
   final int i;
   final List items;
@@ -146,6 +153,7 @@ class _CatGridState extends State<CatGrid> {
                     children: [
                       Flexible(
                         child: RichText(
+                            // Product name.
                             text: TextSpan(
                                 style: TextStyle(
                                   color: Colors.blue,
@@ -154,10 +162,12 @@ class _CatGridState extends State<CatGrid> {
                                 ),
                                 text: '${widget.items[widget.i]["name"]}\n',
                                 children: <TextSpan>[
+                              // Product Category.
                               TextSpan(
                                 style: TextStyle(color: Colors.black),
                                 text: '${widget.items[widget.i]["category"]}\n',
                               ),
+                              // Sold by.
                               TextSpan(
                                 style: TextStyle(
                                   color: Colors.grey,
@@ -167,6 +177,7 @@ class _CatGridState extends State<CatGrid> {
                               ),
                             ])),
                       ),
+                      // Product price.
                       Column(children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 8.0),
