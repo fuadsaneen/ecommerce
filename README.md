@@ -1,16 +1,8 @@
-# ecommerce
+# Nuchange Informatics - Ecommerce Assignment.
 
-A new Flutter project.
+This repository contains the source code of "Nuchange Informatics - React Developer Assignment".
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The following features are implemented:
+1) Read data from JSON file.
+2) Load images of each product.
+3) Display those data in a nice User Interface.
